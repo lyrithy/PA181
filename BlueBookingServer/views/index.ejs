@@ -1,0 +1,66 @@
+<% include header %>
+<div class="container">
+	<h4>Hotels Search</h4>
+	<form action="/hotels" method="get" role="form">
+		<div class="form-group">
+			<label for="city">City</label>
+			<select name="city" class="form-control" required>
+				<option selected="selected" disabled="disabled" value="">Select a city</option>
+				<option value="Paris">Paris</option>
+				<option value="London">London</option>
+				<option value="New York">New York</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="from">From</label>
+			<input id="from" class="form-control" type='text' name='from' placeholder="mm/dd/yyyy" required/>
+		</div>
+		<div class="form-group">
+			<label for="to">To</label>
+			<input id="to" class="form-control" type='text' name='to' placeholder="mm/dd/yyyy" required/>
+		</div>
+		<button type="submit" class="btn btn-primary btn-block" onclick="return validateForm()">Find hotels</button>
+	</form>
+</div>
+</div>
+	<script type="text/javascript">
+		function validateForm(){
+			if (document.getElementById('city') == ''){
+				alert('Please select a city from the list');
+				return false;
+			}
+			fromDate = document.getElementById('from').value;
+			toDate = document.getElementById('to').value;
+			if(isNaN(Date.parse(fromDate)) || isNaN(Date.parse(toDate))) {
+				alert('Please enter a valid date.');
+				return false;
+			} 
+		}
+	</script>
+	<script src="/datepicker/js/bootstrap-datepicker.js"></script>
+	<script type="text/javascript">
+		var nowTemp = new Date();
+		var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+		var checkin = $('#from').datepicker({
+		  onRender: function(date) {
+		    return date.valueOf() < now.valueOf() ? 'disabled' : '';
+		  }
+		}).on('changeDate', function(ev) {
+		  if (ev.date.valueOf() > checkout.date.valueOf()) {
+		    var newDate = new Date(ev.date)
+		    newDate.setDate(newDate.getDate() + 1);
+		    checkout.setValue(newDate);
+		  }
+		  checkin.hide();
+		  $('#to')[0].focus();
+		}).data('datepicker');
+		var checkout = $('#to').datepicker({
+		  onRender: function(date) {
+		    return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+		  }
+		}).on('changeDate', function(ev) {
+		  checkout.hide();
+		}).data('datepicker');
+	</script>
+</body>
+</html>

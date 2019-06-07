@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>bluebooking</name>
+  <uuid>876572c0-f7d4-4223-9e20-059b27659610</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="pricing" Ordering="Default">
+        <RuleList>
+          <Package Name="pricing"/>
+        </RuleList>
+      </RuleTask>
+      <ActionTask Identifier="initReservation">
+        <Actions Language="irl"><![CDATA[result = new com.ibm.bluebooking.Result(hotel, checkin, checkout);]]></Actions>
+      </ActionTask>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_3" Task="pricing"/>
+      <TaskNode Identifier="node_2" Task="initReservation"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_1" Source="node_3" Target="node_1"/>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
+      <Transition Identifier="transition_2" Source="node_2" Target="node_3"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_3#height">40.0</Data>
+      <Data Name="node_2#height">40.0</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_2#name">node_3</Data>
+      <Data Name="node_2#width">121.37109</Data>
+      <Data Name="node_3#y">181.0</Data>
+      <Data Name="node_3#width">102.0</Data>
+      <Data Name="node_3#name">node_3</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_3#x">-334.31445</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_0#x">-334.31445</Data>
+      <Data Name="node_1#x">-334.31445</Data>
+      <Data Name="node_1#width">24.0</Data>
+      <Data Name="node_1#y">262.5</Data>
+      <Data Name="node_1#height">24.0</Data>
+      <Data Name="node_2#x">-334.31445</Data>
+      <Data Name="node_2#y">91.0</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_0#name">node_0</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow>
+</rfModel>
+  <mainFlowTask>true</mainFlowTask>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

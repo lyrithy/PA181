@@ -1,0 +1,46 @@
+<% include header %>
+<div class="container" onclick="hidePopovers(event)">
+	<h4><%= city %> from <%= from %> to <%= to %></h4>
+	<br/>
+	<table class="table table-striped">
+		<tbody>
+			<%	results.forEach(function(result){ 
+				var standardRate = result['hotel']['standardRate'];
+				var rate = result['rate'];
+				var reduction = standardRate != rate;
+				var messages = '';
+				result['messages'].forEach(function(msg) {
+					messages += '<li>' + msg + '</li>';
+				});	%>
+			<tr>
+				<td>
+					<span style="font-size: medium">$<%= rate %></span> 
+					<% if(reduction){ %>
+						<span class="reduction">$<%= standardRate %></span>
+					<% } %>
+					<a class="glyphicon glyphicon-info-sign" rel="popover" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" data-content="<%= messages %>" />
+				</td>
+				<td><%= result['hotel']['name'] %></td>
+			</tr>
+			<% }) %>
+		</tbody>
+	</table>
+	<p> * Click <span class="glyphicon glyphicon-info-sign"></span> to see price details</p>
+	<a href="/" class="btn btn-primary"><span class="glyphicon glyphicon-chevron-left"></span> Back to Search</a>
+</div>
+</div>
+<script type="text/javascript">
+	// initialize the popovers
+	$('document').ready(function(){
+		$("[rel='popover']").popover();
+	});
+	
+	function hidePopovers(e) {
+		var target = (e.target) ? e.target : e.srcElement;
+		if (target.rel != 'popover'){
+			$("[rel='popover']").popover('hide');
+		}
+	}
+</script>
+</body>
+</html>

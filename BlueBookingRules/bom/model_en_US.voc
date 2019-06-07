@@ -1,0 +1,26 @@
+# Vocabulary Properties
+uuid = bc1c0812-92ad-45b2-ad13-cc17bc1ff0fe
+
+# com.ibm.bluebooking.Hotel
+com.ibm.bluebooking.Hotel#concept.label = hotel
+com.ibm.bluebooking.Hotel.city#phrase.action = set the city of {this} to {city}
+com.ibm.bluebooking.Hotel.city#phrase.navigation = {city} of {this}
+com.ibm.bluebooking.Hotel.name#phrase.action = set the name of {this} to {name}
+com.ibm.bluebooking.Hotel.name#phrase.navigation = {name} of {this}
+com.ibm.bluebooking.Hotel.standardRate#phrase.action = set the standard rate of {this} to {standard rate}
+com.ibm.bluebooking.Hotel.standardRate#phrase.navigation = {standard rate} of {this}
+
+# com.ibm.bluebooking.Result
+com.ibm.bluebooking.Result#concept.label = result
+com.ibm.bluebooking.Result.addMessage(java.lang.String)#phrase.action = add {0} to the messages of {this}
+com.ibm.bluebooking.Result.checkin#phrase.action = set the checkin of {this} to {checkin}
+com.ibm.bluebooking.Result.checkin#phrase.navigation = {checkin} of {this}
+com.ibm.bluebooking.Result.checkout#phrase.action = set the checkout of {this} to {checkout}
+com.ibm.bluebooking.Result.checkout#phrase.navigation = {checkout} of {this}
+com.ibm.bluebooking.Result.daysAhead#phrase.navigation = {days ahead of arrival} of {this}
+com.ibm.bluebooking.Result.hotel#phrase.action = set the hotel of {this} to {hotel}
+com.ibm.bluebooking.Result.hotel#phrase.navigation = {hotel} of {this}
+com.ibm.bluebooking.Result.messages#phrase.navigation = {message} of {this}
+com.ibm.bluebooking.Result.nbNights#phrase.navigation = {number of nights} of {this}
+com.ibm.bluebooking.Result.rate#phrase.action = set the rate of {this} to {rate}
+com.ibm.bluebooking.Result.rate#phrase.navigation = {rate} of {this}

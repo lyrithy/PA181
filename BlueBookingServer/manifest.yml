@@ -1,0 +1,9 @@
+applications:
+- host: businessrules-bluebooking
+  disk: 1024M
+  name: BlueBookingV1
+  command: node app.js
+  path: .
+  domain: mybluemix.net
+  mem: 256M
+  instances: 1

@@ -1,0 +1,33 @@
+
+property loadGetterSetterAsProperties "true"
+property origin "xom:/BlueBookingRules//BlueBookingXom"
+property uuid "7cc36e72-61e3-44d1-9de2-a7961d6d44c5"
+package com.ibm.bluebooking;
+
+
+public class Hotel
+{
+    public string city;
+    public string name;
+    public float standardRate;
+    public Hotel();
+    public boolean equals(object arg);
+    public int hashCode();
+}
+
+public class Result
+{
+    public java.util.Date checkin;
+    public java.util.Date checkout;
+    public readonly int daysAhead;
+    public com.ibm.bluebooking.Hotel hotel;
+    public readonly java.util.List messages domain 0,* class string;
+    public readonly int nbNights;
+    public float rate;
+    public Result(com.ibm.bluebooking.Hotel arg1, java.util.Date arg2, java.util.Date arg3);
+    public Result();
+    public void addMessage(string arg);
+    public boolean equals(object arg);
+    public int hashCode();
+}
+

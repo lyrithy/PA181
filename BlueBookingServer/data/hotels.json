@@ -1,0 +1,85 @@
+{
+"Paris":[
+  {
+    "name": "Paris Louvre",
+    "city": "paris",
+    "standardRate": 200
+  },
+  {
+    "name": "Paris Opera",
+    "city": "paris",
+    "standardRate": 180
+  },
+  {
+    "name": "Paris Bastille",
+    "city": "paris",
+    "standardRate": 160
+  },
+  {
+    "name": "Paris Montparnasse",
+    "city": "paris",
+    "standardRate": 120
+  },
+  {
+    "name": "Paris Gare de Lyon",
+    "city": "paris",
+    "standardRate": 150
+  },
+  {
+    "name": "Paris La defense",
+    "city": "paris",
+    "standardRate": 140
+  }],
+"London":[
+  {
+    "name": "London City",
+    "city": "london",
+    "standardRate": 360
+  },
+  {
+    "name": "London South",
+    "city": "london",
+    "standardRate": 220
+  },
+  {
+    "name": "London Chelsea",
+    "city": "london",
+    "standardRate": 200
+  },
+  {
+    "name": "London Victoria",
+    "city": "london",
+    "standardRate": 290
+  },
+  {
+    "name": "London Old Street",
+    "city": "london",
+    "standardRate": 240
+  }],
+"New York":[
+  {
+    "name": "New York Central Park",
+    "city": "new york",
+    "standardRate": 260
+  },
+  {
+    "name": "New York Times Square",
+    "city": "new york",
+    "standardRate": 300
+  },
+  {
+    "name": "New York Midtown east",
+    "city": "new york",
+    "standardRate": 190
+  },
+  {
+    "name": "New York Fifth avenue",
+    "city": "new york",
+    "standardRate": 380
+  },
+  {
+    "name": "New York Uptown 120th st",
+    "city": "new york",
+    "standardRate": 120
+  }]
+}

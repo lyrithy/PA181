@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RuleApp>
+   <ruleset>
+      <kind>ruleproject</kind>
+      <display-name>BlueBookingRules</display-name>
+      <name>BlueBookingRules</name>
+      <version>1.0</version>
+      <fullpath>runtime/BlueBookingRules10.jar</fullpath>
+      <location>BlueBookingRules</location>
+      <export>true</export>
+   </ruleset>
+</RuleApp>
+

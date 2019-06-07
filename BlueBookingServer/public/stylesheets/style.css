@@ -1,0 +1,58 @@
+/* style.css
+ * This file provides css styles.
+ */
+
+@import url(//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css);
+@import url(/datepicker/css/datepicker.css);
+
+@media (min-width: 992px){
+	.frame{
+		width: 380px;
+		height: 560px;
+		margin-top: 80px;
+		margin-left:auto;
+		margin-right:auto;
+		border: 2px solid;
+		border-radius: 8px;
+	}
+	.container{
+		width: 380px;
+	}
+}
+
+.navbar-default {
+    background-color: #0099CC;
+}
+
+.navbar-default .navbar-brand, .navbar-brand:hover {
+    color: white;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+   background-color: #EAFAFF;
+}
+
+.btn-primary {
+	background-color: #0099CC;
+}
+
+.btn-primary:hover {
+	background-color: #428bca;
+}
+
+.reduction{
+	font-size: small;
+	text-decoration:line-through;
+	color: #666666
+}
+
+.glyphicon-info-sign {
+	text-decoration: none;
+	color: #0096D7;
+	font-size: x-small
+}
+
+.glyphicon-info-sign:hover{
+	text-decoration: none;
+	color: #428bca 
+}
