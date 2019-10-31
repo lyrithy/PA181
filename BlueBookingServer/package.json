@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "A simple hotel booking app using Rules Service in Bluemix",
 	"dependencies": {
-		"express": "3.4.7",
+		"express": "4.17.1",
 		"ejs": "0.8.5",
 		"async": "0.7.0"
 	},
